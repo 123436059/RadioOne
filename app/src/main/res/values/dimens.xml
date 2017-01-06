@@ -1,0 +1,102 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--car dimen-->
+    <!-- RT PS TextView的字号为20号,  -->
+    <dimen name="rds_info_txt">16sp</dimen>
+
+    <!-- RT PS信息的字号为14号 -->
+    <dimen name="rt_ps_info_txt">14sp</dimen>
+
+    <!-- RT信息与左边间距12像素 -->
+    <dimen name="rt_info_left_dist">12dip</dimen>
+
+    <!-- RT信息与底边间距8像素 -->
+    <dimen name="rt_info_bottom_dist">8dip</dimen>
+
+    <!-- PS与左边间距51像素 -->
+    <dimen name="ps_left_dist">51dip</dimen>
+
+    <!-- ps信息与左边的间距为12像素 -->
+    <dimen name="ps_info_left_dist">12dip</dimen>
+
+    <!-- FM1 FM2 FM3 AM1 AM2 字号为30号 -->
+    <dimen name="freq_range">30sp</dimen>
+
+    <!-- MHz 或 KHz 的字号为30号 -->
+    <dimen name="freq">30sp</dimen>
+
+    <!-- FM1 FM2 FM3 AM1 AM2 与右边间距为17像素 -->
+    <dimen name="freq_range_right_dist">17dip</dimen>
+
+    <!-- MHz 或 KHz 与左边间距为15像素-->
+    <dimen name="freq_left_dist">15dip</dimen>
+
+    <!-- rt ps信息 与 上边 频率布局之间的间距 为22像素, 16-->
+    <dimen name="rtps_freq">16dip</dimen>
+
+    <!-- af ta tp pty 的字号为17号 -->
+    <dimen name="af_ta_tp_pty">17sp</dimen>
+
+    <!-- af ta tp pty 之间的间距为15像素 -->
+    <dimen name="ta_tp_pty_left_dist">15dip</dimen>
+
+    <!-- 频率与上面的间距 为18像素, 14-->
+    <dimen name="freq_top_dist">14dip</dimen>
+
+    <!-- af ta tp pty与上面的间距 为19像素-->
+    <dimen name="af_ta_tp_pty_top_dist">19dip</dimen>
+
+    <!-- 上bar投影为19像素 -->
+    <dimen name="upbar_projection">19dip</dimen>
+
+    <!-- 信号图标与左边间距为16像素 -->
+    <dimen name="signal_left">16dip</dimen>
+
+    <!-- LOC图标与右边间距为14像素 -->
+    <dimen name="loc_indicate_right">14dip</dimen>
+
+    <!-- St图标与右边间距为11像素 -->
+    <dimen name="st_right">11dip</dimen>
+
+    <!-- KeyButton 与左边KeyButton的间距为6像素 -->
+    <dimen name="key_button_left">6dip</dimen>
+
+    <!-- 两排KeyButton的间距为4像素 -->
+    <dimen name="up_down_key_button_top">4dip</dimen>
+
+    <!-- Keyboard info 与 KeyButton的间距为3像素 -->
+    <dimen name="keyinfo_key_button_top">3dip</dimen>
+
+    <!-- 跳转键盘信息字体为30号 -->
+    <dimen name="keyinfo_size">30sp</dimen>
+
+    <!-- 跳转键盘信息与上边 12像素-->
+    <dimen name="keyinfo_top">12dip</dimen>
+
+    <!-- pty list item 字体为24号-->
+    <dimen name="pty_list_item">24sp</dimen>
+
+    <!-- pty list item padding left -->
+    <dimen name="pty_list_item_paddingleft">39dip</dimen>
+
+    <!-- RDS 与上边间距为10像素-->
+    <dimen name="rds_top">10dip</dimen>
+
+    <!-- eq和rds布局 与左边间距为12像素-->
+    <dimen name="eq_rds_layout_left">12dip</dimen>
+
+    <!--  预存电台字体为20号-->
+    <dimen name="common_station">20sp</dimen>
+
+    <!-- 预存电台padding bottom间距为12像素-->
+    <dimen name="common_station_padding_bottom">12dip</dimen>
+
+    <!--  Menu选项字体为20号-->
+    <dimen name="menu">20sp</dimen>
+
+    <!-- Menu选项padding bottom间距为12像素-->
+    <dimen name="menu_padding_bottom">12dip</dimen>
+</resources>
