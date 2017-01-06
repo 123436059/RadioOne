@@ -30,7 +30,17 @@ public class FreqView extends View {
     private int currentFreqHz = 8750;
     private int currentBitmapIndex = 0;
     private int BOTTOM_OFFSET = 2;
-    private int CELL = 4;
+
+    /*
+    标尺中的每一小格距
+     */
+    private int CELL = 14;
+
+    /*
+    刻度长3个像素
+     */
+    private int MARK = 2;
+    private int firstDrawFreqHz = 0;
 
     public FreqView(Context context) {
         this(context, null);
@@ -102,8 +112,30 @@ public class FreqView extends View {
         canvas.drawBitmap(freqs[currentBitmapIndex], (bitmapWidth - rulerWidth) / 2
                 , bitmapHeight - rulerHeight - BOTTOM_OFFSET, mPaint);
         int markCount = getAMCountMarkRightReq();
-        int midPositionX = bitmapWidth/2+markCount*CELL + (markCount-1)* BOTTOM_OFFSET;
+        int midPositionX = bitmapWidth / 2 + markCount * CELL + (markCount - 1) * MARK;
+        int midPositionY = (int) (bitmapHeight - rulerHeight - mFreqValuePaint.getTextSize());
+        int firstDrawFreq = getAMFirstDrawFreq();
 
+    }
+
+
+    /**
+     * 得到AM第一个刻画频率
+     *
+     * @return
+     */
+    private int getAMFirstDrawFreq() {
+        int digitAM = Utils.getDigitValueFromFreq(currentFreqHz, 1);
+        if (digitAM == 0)
+            firstDrawFreqHz = currentFreqHz;
+
+        if (digitAM < 5 && digitAM > 0)
+            firstDrawFreqHz = (int) (Math.floor((currentFreqHz + 10) / 10) * 10);
+
+        if (digitAM >= 5)
+            firstDrawFreqHz = (int) (Math.floor((currentFreqHz + 5) / 10) * 10);
+
+        return firstDrawFreqHz;
     }
 
     private int getAMCountMarkRightReq() {
