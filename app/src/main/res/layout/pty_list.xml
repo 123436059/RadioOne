@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pty_list_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:id="@+id/pty_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pty_list_bg1" />
+
+        <ImageView
+            android:id="@+id/pty_iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pty_iv1"
+            android:background="@drawable/pty_list_bg2" />
+
+        <ListView
+            android:id="@+id/pty_listview"
+            android:divider="@drawable/pty_item_seperator"
+            android:background="@drawable/pty_list_item_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/pty_iv2"
+            android:layout_alignRight="@id/pty_iv2"
+            android:layout_alignLeft="@id/pty_iv2"
+            android:layout_alignBottom="@id/pty_iv2"
+            android:layout_below="@id/pty_iv1"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -3,4 +3,38 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <!-- rt 和 ps -->
+    <color name="rt_ps">#7ED702</color>
+
+    <!-- rt信息和ps信息 -->
+    <color name="rt_ps_info_txt">#FFFFFF</color>
+
+    <!-- FM1 FM2 FM3 AM1 AM2 -->
+    <color name="freq_range">#FFFFFF</color>
+
+    <!-- MHz KHz -->
+    <color name="freq">#FFFFFF</color>
+
+    <!-- af ta tp pty -->
+    <color name="af_ta_tp_pty">#FFFFFF</color>
+
+    <!-- af ta tp pty selected-->
+    <color name="af_ta_tp_pty_selected">#7ED702</color>
+
+    <!-- 跳转键盘信息 -->
+    <color name="keyinfo_color">#FFFFFF</color>
+
+    <!-- pty list item -->
+    <color name="pty_item_color">#FFFFFF</color>
+
+    <!--  当前播放预存电台-->
+    <color name="common_station_select">#F54604</color>
+
+    <!--  非当前播放预存电台-->
+    <color name="common_station">#CECECE</color>
+
+    <!-- Menu -->
+    <color name="menu">#FFFFFF</color>
 </resources>

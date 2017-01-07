@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright(C) 2012,Kaizhen Electronic Co.,Ltd.
+	Author: Kaizhen
+	Company: Kaizhen Electronic Co.,Ltd
+	Version: 1.0
+	This file belongs to Kaizhen Electronic Co.,Ltd.
+	All rights reserved
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <Button
+        android:id="@+id/button_seek_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/forward_select" />
+
+    <LinearLayout
+        android:id="@+id/rds_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_seek_backward"
+        android:layout_toRightOf="@+id/button_seek_backward"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/af_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/af_select" />
+
+        <Button
+            android:id="@+id/ta_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ta_select" />
+
+        <Button
+            android:id="@+id/pty_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pty_select" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stations_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_seek_backward"
+        android:layout_toRightOf="@+id/button_seek_backward"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/pre_station1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pre_station"
+            android:background="@drawable/pre_station1_select" />
+
+        <Button
+            android:id="@+id/pre_station2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pre_station"
+            android:background="@drawable/pre_station2_select" />
+
+        <Button
+            android:id="@+id/pre_station3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pre_station"
+            android:background="@drawable/pre_station3_select" />
+
+        <Button
+            android:id="@+id/pre_station4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pre_station"
+            android:background="@drawable/pre_station4_select" />
+
+        <Button
+            android:id="@+id/pre_station5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pre_station"
+            android:background="@drawable/pre_station5_select" />
+
+        <Button
+            android:id="@+id/pre_station6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/pre_station"
+            android:background="@drawable/pre_station6_select" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_seek_backward"
+        android:layout_toRightOf="@+id/button_seek_backward" >
+
+        <Button
+            android:id="@+id/backward_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backward_station_select" />
+
+        <Button
+            android:id="@+id/band"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/band_select" />
+
+        <Button
+            android:id="@+id/forward_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/forward_station_select" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_seek_backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backward_select"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

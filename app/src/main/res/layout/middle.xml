@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright(C) 2012,Kaizhen Electronic Co.,Ltd.
+	Author: Kaizhen
+	Company: Kaizhen Electronic Co.,Ltd
+	Version: 1.0
+	This file belongs to Kaizhen Electronic Co.,Ltd.
+	All rights reserved
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/indicator_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/af_ta_tp_pty_top_dist"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/af_indicate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/af"
+            android:textColor="@color/af_ta_tp_pty"
+            android:textSize="@dimen/af_ta_tp_pty" />
+
+        <TextView
+            android:id="@+id/tp_indicate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ta_tp_pty_left_dist"
+            android:text="@string/tp"
+            android:textColor="@color/af_ta_tp_pty"
+            android:textSize="@dimen/af_ta_tp_pty" />
+
+        <TextView
+            android:id="@+id/ta_indicate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ta_tp_pty_left_dist"
+            android:text="@string/ta"
+            android:textColor="@color/af_ta_tp_pty"
+            android:textSize="@dimen/af_ta_tp_pty" />
+
+        <TextView
+            android:id="@+id/pty_indicate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ta_tp_pty_left_dist"
+            android:text="@string/pty"
+            android:textColor="@color/af_ta_tp_pty"
+            android:textSize="@dimen/af_ta_tp_pty" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/freq_top_dist"
+        android:gravity="bottom" >
+
+        <TextView
+            android:id="@+id/freq_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="@dimen/freq_range_right_dist"
+            android:text="@string/fm1"
+            android:textColor="@color/freq_range"
+            android:textSize="@dimen/freq_range" />
+
+        <LinearLayout
+            android:id="@+id/digitLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/ib_digit_thousand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ib_digit_hundred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_2"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ib_digit_ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_8" />
+
+            <ImageView
+                android:id="@+id/ib_digit_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_7" />
+
+            <ImageView
+                android:id="@+id/ib_digit_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_dot" />
+
+            <ImageView
+                android:id="@+id/ib_digit_decimal_ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_5" />
+
+            <ImageView
+                android:id="@+id/ib_digit_decimal_hundred"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/digit_0" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/freq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/freq_left_dist"
+            android:text="@string/mhz"
+            android:textColor="@color/freq"
+            android:textSize="@dimen/freq" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rt_ps_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/rt_info_bottom_dist"
+        android:layout_marginTop="@dimen/rtps_freq"
+        android:gravity="center_vertical"
+        android:visibility="invisible" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rt"
+            android:textColor="@color/rt_ps"
+            android:textSize="@dimen/rds_info_txt" />
+
+        <TextView
+            android:id="@+id/rt_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/rt_info_left_dist"
+            android:background="@drawable/rt_tv"
+            android:textColor="@color/rt_ps_info_txt"
+            android:textSize="@dimen/rt_ps_info_txt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ps_left_dist"
+            android:text="@string/ps"
+            android:textColor="@color/rt_ps"
+            android:textSize="@dimen/rds_info_txt" />
+
+        <TextView
+            android:id="@+id/ps_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ps_info_left_dist"
+            android:background="@drawable/ps_tv"
+            android:textColor="@color/rt_ps_info_txt"
+            android:textSize="@dimen/rt_ps_info_txt" />
+    </LinearLayout>
+
+</LinearLayout>

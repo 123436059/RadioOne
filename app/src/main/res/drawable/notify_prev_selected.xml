@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright(C) 2012,Kaizhen Electronic Co.,Ltd.
+	Author: Kaizhen 
+	Company: Kaizhen Electronic Co.,Ltd
+	Version: 1.0
+	This file belongs to Kaizhen Electronic Co.,Ltd. 
+	All rights reserved
+
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_window_focused="false" android:state_pressed="false" android:drawable="@drawable/notify_prev" />
+    <item android:state_window_focused="true" android:state_pressed="true" android:drawable="@drawable/notify_prev_down" />
+    <item android:state_focused="true" android:drawable="@drawable/notify_prev_down" />
+</selector>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright(C) 2012,Kaizhen Electronic Co.,Ltd.
+	Author: Kaizhen 
+	Company: Kaizhen Electronic Co.,Ltd
+	Version: 1.0
+	This file belongs to Kaizhen Electronic Co.,Ltd. 
+	All rights reserved
+
+-->
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/key0_down" />
+    <item android:state_focused="true" android:drawable="@drawable/key0_down" />
+    <item android:drawable="@drawable/key0" />
+</selector>

@@ -11,7 +11,29 @@
         android:id="@+id/up_include"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout=""
+        layout="@layout/upbar"
         />
+
+    <include
+        android:id="@+id/mid_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/down_include"
+        layout="@layout/middle" />
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/mid_include"
+        layout="@layout/left_layout"/>
+
+    <include
+        android:id="@+id/down_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/downbar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

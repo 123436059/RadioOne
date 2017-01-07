@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright(C) 2012,Kaizhen Electronic Co.,Ltd.
+	Author: Kaizhen
+	Company: Kaizhen Electronic Co.,Ltd
+	Version: 1.0
+	This file belongs to Kaizhen Electronic Co.,Ltd.
+	All rights reserved
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboard_bg_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/keyboard_bg" />
+
+        <TextView
+            android:id="@+id/key_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/keyinfo_top"
+            android:background="@drawable/key_info_bg"
+            android:gravity="center"
+            android:text="@string/keyboard_info_default"
+            android:textColor="@color/keyinfo_color"
+            android:textSize="@dimen/keyinfo_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/key_info_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/keyinfo_key_button_top"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/key1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/key1_select" />
+
+                <Button
+                    android:id="@+id/key2_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key2_select" />
+
+                <Button
+                    android:id="@+id/key3_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key3_select" />
+
+                <Button
+                    android:id="@+id/key4_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key4_select" />
+
+                <Button
+                    android:id="@+id/key5_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key5_select" />
+
+                <Button
+                    android:id="@+id/key_back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key_back_select" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/up_down_key_button_top" >
+
+                <Button
+                    android:id="@+id/key6_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/key6_select" />
+
+                <Button
+                    android:id="@+id/key7_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key7_select" />
+
+                <Button
+                    android:id="@+id/key8_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key8_select" />
+
+                <Button
+                    android:id="@+id/key9_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key9_select" />
+
+                <Button
+                    android:id="@+id/key0_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key0_select" />
+
+                <Button
+                    android:id="@+id/key_ok_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/key_button_left"
+                    android:background="@drawable/key_ok_select" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

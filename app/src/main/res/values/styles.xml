@@ -8,4 +8,30 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="PopupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/in</item>
+        <item name="android:windowExitAnimation">@anim/out</item>
+    </style>
+
+    <style name="pre_station">
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:paddingBottom">@dimen/common_station_padding_bottom</item>
+        <item name="android:textSize">@dimen/common_station</item>
+        <item name="android:textColor">@color/common_station</item>
+        <item name="android:text">@string/default_hz</item>
+    </style>
+
+    <style name="MenuPopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/menu_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/menu_push_bottom_out</item>
+    </style>
+
+    <style name="menu">
+        <item name="android:paddingBottom">@dimen/menu_padding_bottom</item>
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:textSize">@dimen/menu</item>
+        <item name="android:textColor">@color/menu</item>
+    </style>
+
 </resources>

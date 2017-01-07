@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Copyright(C) 2012,Kaizhen Electronic Co.,Ltd.
+	Author: Kaizhen
+	Company: Kaizhen Electronic Co.,Ltd
+	Version: 1.0
+	This file belongs to Kaizhen Electronic Co.,Ltd.
+	All rights reserved
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/menu_bg" >
+
+    <Button
+        android:id="@+id/skip_btn"
+        style="@style/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skip_select"
+        android:text="@string/skip_btn" />
+
+    <Button
+        android:id="@+id/loc_btn"
+        style="@style/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dip"
+        android:background="@drawable/loc_select"
+        android:text="@string/loc_btn" />
+
+    <Button
+        android:id="@+id/as_btn"
+        style="@style/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dip"
+        android:background="@drawable/as_select"
+        android:text="@string/as_btn" />
+
+    <Button
+        android:id="@+id/ps_btn"
+        style="@style/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dip"
+        android:background="@drawable/ps_select"
+        android:text="@string/ps_btn" />
+
+</LinearLayout>

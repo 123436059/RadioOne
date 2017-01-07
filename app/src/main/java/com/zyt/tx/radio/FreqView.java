@@ -7,12 +7,16 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.view.View;
 
 
 public class FreqView extends View {
 
+    //显示频率之间的距离
+    private static final int DIST = 160;
     Bitmap[] freqs;
     Context mContext;
     private Paint mPaint;
@@ -31,6 +35,10 @@ public class FreqView extends View {
     private int currentBitmapIndex = 0;
     private int BOTTOM_OFFSET = 2;
 
+
+    private int maxFreq = 10800;
+    private int minFreq = 8750;
+
     /*
     标尺中的每一小格距
      */
@@ -41,6 +49,46 @@ public class FreqView extends View {
      */
     private int MARK = 2;
     private int firstDrawFreqHz = 0;
+    private int digitAM;
+
+
+    private static final int UPDATE_SCROLL_RULLER = 0x0;
+    private Handler scrollRulerHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case UPDATE_SCROLL_RULLER:
+                    if (isScrollRuler()) {
+                        refresh();
+                    }
+                    break;
+            }
+
+        }
+
+    };
+
+
+    public void refresh() {
+        if (!scrollRulerHandler.hasMessages(UPDATE_SCROLL_RULLER)) {
+            scrollRulerHandler.sendEmptyMessage(UPDATE_SCROLL_RULLER);
+        }
+
+    }
+
+    private int targetFreqHz = 8750;
+    private int stepFreq = 8750;
+
+    private boolean isScrollRuler() {
+        boolean flag = false;
+        int tempStep = (targetFreqHz - currentFreqHz) / stepFreq;
+        currentFreqHz += tempStep;
+        if (Math.abs(targetFreqHz - currentFreqHz) < 10) {
+            currentFreqHz = targetFreqHz;
+            flag = true;
+        }
+        return flag;
+    }
 
     public FreqView(Context context) {
         this(context, null);
@@ -116,6 +164,64 @@ public class FreqView extends View {
         int midPositionY = (int) (bitmapHeight - rulerHeight - mFreqValuePaint.getTextSize());
         int firstDrawFreq = getAMFirstDrawFreq();
 
+        //draw mid freq
+        canvas.drawText(String.valueOf(firstDrawFreq), midPositionX, midPositionY, mFreqValuePaint);
+
+
+        //draw left freq
+        int leftFreq = firstDrawFreq;
+        for (int i = 0; i < 2; i++) {
+            leftFreq -= 100;
+            if (leftFreq < minFreq - 100) {
+                leftFreq = maxFreq;
+            }
+
+            if (digitAM == 8) {
+                if (i == 2) {
+                    continue;
+                } else {
+                    canvas.drawText(String.valueOf(leftFreq), midPositionX - i * DIST, midPositionY, mFreqValuePaint);
+
+                }
+            } else {
+                canvas.drawText(String.valueOf(leftFreq), midPositionX - i * DIST, midPositionY, mFreqValuePaint);
+            }
+        }
+
+        int rightReq = firstDrawFreq;
+
+        for (int i = 0; i < 4; i++) {
+            rightReq = rightReq + 10;
+            if (rightReq > maxFreq + 10) {
+                rightReq = minFreq;
+            }
+
+            if (digitAM == 2 || digitAM == 1) {
+                if (i == 1) {
+                    continue;
+                } else {
+                    canvas.drawText(String.valueOf(rightReq), midPositionX + i * DIST, midPositionY, mFreqValuePaint);
+                }
+            } else {
+                canvas.drawText(String.valueOf(rightReq), midPositionX + i * DIST, midPositionY, mFreqValuePaint);
+            }
+            canvas.drawBitmap(indicator, (bitmapWidth - indicatorWidth) / 2, bitmapHeight - indicatorHeight - BOTTOM_OFFSET, mPaint);
+        }
+
+    }
+
+
+    public void setTargetFreqHz(int targetFreqHz, boolean isAutoSearch) {
+
+        this.targetFreqHz = targetFreqHz;
+
+        if (isAutoSearch) {
+            currentFreqHz = targetFreqHz;
+            this.invalidate();
+        } else {
+            refresh();
+        }
+
     }
 
 
@@ -125,7 +231,7 @@ public class FreqView extends View {
      * @return
      */
     private int getAMFirstDrawFreq() {
-        int digitAM = Utils.getDigitValueFromFreq(currentFreqHz, 1);
+        digitAM = Utils.getDigitValueFromFreq(currentFreqHz, 1);
         if (digitAM == 0)
             firstDrawFreqHz = currentFreqHz;
 
@@ -151,5 +257,21 @@ public class FreqView extends View {
 
     private void drawFM(Canvas canvas) {
 
+    }
+
+    public void setCurrentBand(int currentBand) {
+        this.currentBand = currentBand;
+    }
+
+    public void setMaxFreq(int maxFreq) {
+        this.maxFreq = maxFreq;
+    }
+
+    public void setMinFreq(int minFreq) {
+        this.minFreq = minFreq;
+    }
+
+    public void setStepFreq(int stepFreq) {
+        this.stepFreq = stepFreq;
     }
 }
